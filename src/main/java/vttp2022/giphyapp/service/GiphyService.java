@@ -61,7 +61,7 @@ public class GiphyService {
                 .build();
 
         RestTemplate template = new RestTemplate();
-        // ResponseEntity<String> resp = template.getForEntity(url, String.class);
+        // ResponseEntity<String> resp = template.getForEntity(req, String.class);
 
         ResponseEntity<String> resp = template.exchange(req,String.class);  
 
