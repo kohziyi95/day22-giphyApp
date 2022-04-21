@@ -28,7 +28,10 @@ public class GiphyService {
     private static Logger logger = Logger.getLogger(GiphyService.class.getName());
     
     //GIPHY_API_KEY
-    @Value("${giphy.api.key}")
+    // @Value("${giphy.api.key}")
+    // private String giphyKey;
+
+    @Value("${{secrets.giphy_api_key}}")
     private String giphyKey;
 
     private final String GIPHY_SEARCH = "https://api.giphy.com/v1/gifs/search";
